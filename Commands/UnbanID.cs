@@ -1,5 +1,6 @@
 ﻿using CommandSystem;
 using Exiled.API.Features;
+using Exiled.Permissions.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,12 @@ namespace UnbanHelper.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
+            if (!sender.CheckPermission("unbanhelper.id"))
+            {
+                response = "<color=red> No permissions!</color>";
+                return false;
+            }
+
             if (arguments.Count < 1)
             {
                 response = $"<color=yellow>Usage: {Command} <Steam/Discord ID> </color>";
