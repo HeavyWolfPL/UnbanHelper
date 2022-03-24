@@ -8,7 +8,7 @@ Handle unbans more easily.
 | Command | Parameters | Permissions | Aliases |
 | --- | --- | --- | --- |
 | unbanid | Steam/Discord ID | unbanhelper.id | uid, gunban |
-| asncheck | RA ID | unbanhelper.asncheck | None |
+| asncheck | RA ID | unbanhelper.asncheck | checkasn |
 
 ## Config
 ```yaml
