@@ -18,7 +18,7 @@ namespace UnbanHelper
 
         public void OnPlayerBanned(BannedEventArgs ev)
         {
-            if (ev.Type == BanHandler.BanType.UserId)
+            if ((ev.Type == BanHandler.BanType.UserId) && (ev.Details.OriginalName != "Unknown - offline ban"))
             {
                 try
                 {
